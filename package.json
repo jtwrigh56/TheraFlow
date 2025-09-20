@@ -1,0 +1,26 @@
+{
+  "name": "theraflow",
+  "version": "1.0.0",
+  "description": "Therapy Scheduling and Attendance Software",
+  "scripts": {
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "build:frontend": "cd frontend && npm run build",
+    "test:frontend": "cd frontend && npm test"
+  },
+  "keywords": [
+    "therapy",
+    "scheduling",
+    "attendance",
+    "healthcare",
+    "management"
+  ],
+  "author": "",
+  "license": "ISC",
+  "private": true
+}
