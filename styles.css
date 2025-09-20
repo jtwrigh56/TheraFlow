@@ -1,0 +1,314 @@
+/* TheraFlow Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.section {
+    min-height: 600px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border-radius: 0.75rem;
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600;
+}
+
+.btn {
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.table th {
+    border-top: none;
+    font-weight: 600;
+    color: #495057;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+}
+
+/* Check-in Kiosk Styles */
+#checkin-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+#checkin-section .card {
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    border-radius: 1rem;
+    transition: transform 0.2s ease;
+}
+
+#checkin-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.patient-checkin-card {
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.patient-checkin-card .card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.patient-checkin-card h4 {
+    margin-bottom: 0.5rem;
+    color: #495057;
+}
+
+.patient-checkin-card .text-muted {
+    font-size: 1.1rem;
+}
+
+/* Dashboard Cards */
+.dashboard-card-icon {
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+/* Status badges */
+.status-scheduled {
+    background-color: #6f42c1;
+}
+
+.status-checked-in {
+    background-color: #28a745;
+}
+
+.status-completed {
+    background-color: #17a2b8;
+}
+
+.status-no-show {
+    background-color: #dc3545;
+}
+
+.status-cancelled {
+    background-color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+    }
+    
+    h1.display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Tablet/Kiosk optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .patient-checkin-card .card-body {
+        padding: 3rem;
+    }
+    
+    .patient-checkin-card h4 {
+        font-size: 1.5rem;
+    }
+    
+    .btn-lg {
+        font-size: 1.25rem;
+        padding: 1rem 2rem;
+    }
+}
+
+/* Animation for check-in success */
+.checkin-success {
+    animation: pulse 0.5s;
+    background-color: #28a745 !important;
+    color: white !important;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Loading spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Modal styles for fallback */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1055;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    display: none;
+}
+
+.modal.show {
+    display: block !important;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+.modal-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(0.3rem - 1px);
+    border-bottom-left-radius: calc(0.3rem - 1px);
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.btn-close {
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='m.235 1.027 14.718 14.718-.707.707L.528 1.734z'/%3e%3cpath d='m14.954 1.027L.236 15.745l-.707-.707L14.247.32z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+    border: 0;
+    border-radius: 0.25rem;
+    opacity: 0.5;
+    width: 1em;
+    height: 1em;
+}
+
+.btn-close:hover {
+    opacity: 0.75;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+}
+
+/* Table responsive enhancements */
+.table-responsive {
+    border-radius: 0.5rem;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.075);
+}
+
+/* Modal enhancements */
+.modal-content {
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+
+/* Success/Error messages */
+.alert {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.alert-success {
+    background-color: #d1edff;
+    color: #0c5460;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
